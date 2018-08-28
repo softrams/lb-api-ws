@@ -1,0 +1,49 @@
+{
+  "name": "apiws",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "test": "./node_modules/.bin/mocha --ui bdd --reporter spec --colors server/tests/unit-tests --recursive --exit",
+    "test:watch": "yarn test -- --watch",
+    "test:cov": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors server/tests/unit-tests --recursive --exit",
+    "test:covci": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec  server/tests/unit-tests --recursive --exit"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "loopback": "^3.19.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.0.0",
+    "loopback-connector-mysql": "^5.3.0",
+    "loopback-discover-models": "git+https://github.com/softrams/loopback-discover-models.git",
+    "loopback-graphql-server": "^1.1.8",
+    "node-memwatch": "^1.0.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0",
+    "swagger-stats": "^0.95.6",
+    "yarn": "^1.9.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nsp": "^2.1.0",
+    "supertest": "^3.1.0",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "apiws"
+}

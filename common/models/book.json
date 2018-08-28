@@ -1,0 +1,31 @@
+{
+  "name": "Book",
+  "relations": {
+    "copyrightowner": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "owner",
+      "primaryKey": "id"
+    }
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "released": {
+      "type": "number",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "number"
+    }
+  }
+}

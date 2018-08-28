@@ -1,0 +1,12 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/explorer",
+    "generateOperationScopedModels": true
+  },
+  "loopback-graphql-server": {
+    "path": "/graphql",
+    "graphiqlPath": "/graphiql",
+    "modelMutationGroups": false,
+    "modelQueryGroups": true
+  }
+}
